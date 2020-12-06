@@ -62,11 +62,9 @@ public class Day_6 {
 						group.remove(letter);
 				}
 			}
-
 		}
 		sum += group.size();
 		System.out.println(sum);
-
 	}
 
 	public static void loadData() {
