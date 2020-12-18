@@ -40,7 +40,7 @@ public class Day_11 {
 		loadData();
 
 		hasChangedFlag = true;
-		int k= 0;
+		int k = 0;
 		while (hasChangedFlag == true) {
 			System.out.println(k++);
 			Character[][] seatsArrayCopy = new Character[seatsArray.length][seatsArray[0].length];
@@ -104,7 +104,7 @@ public class Day_11 {
 			}
 		return seatsList;
 	}
-	
+
 	public static char getSeatTransformation2(int i, int j) {
 		List<Character> neighbours = getSeatNeighbours2(i, j);
 		if (seatsArray[i][j] == 'L')
@@ -120,7 +120,7 @@ public class Day_11 {
 		} else
 			return '.';
 	}
-	
+
 	public static List<Character> getSeatNeighbours2(int i, int j) {
 		List<Character> seatsList = new ArrayList<>();
 
@@ -128,20 +128,19 @@ public class Day_11 {
 			for (int n = -1; n <= 1; n++) {
 				if (m == 0 && n == 0)
 					continue;
-				seatsList.add(getVisiblechair(i,j, m, n));
+				seatsList.add(getVisiblechair(i, j, m, n));
 			}
 		return seatsList;
 	}
-	public static Character getVisiblechair(int i, int j, int stepVertical, int stepHorizontal)
-	{
-		i+= stepVertical;
-		j+= stepHorizontal;
-		while( i>=0 && j>=0 && i<seatsArray.length && j<seatsArray[0].length)
-		{
-			if(seatsArray[i][j] != '.')
+
+	public static Character getVisiblechair(int i, int j, int stepVertical, int stepHorizontal) {
+		i += stepVertical;
+		j += stepHorizontal;
+		while (i >= 0 && j >= 0 && i < seatsArray.length && j < seatsArray[0].length) {
+			if (seatsArray[i][j] != '.')
 				return seatsArray[i][j];
-			i+= stepVertical;
-			j+= stepHorizontal;
+			i += stepVertical;
+			j += stepHorizontal;
 		}
 		return '.';
 	}
