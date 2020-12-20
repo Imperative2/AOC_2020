@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class day_12 {
+public class Day_12 {
 
 	private static List<String> instructionsList;
 	private static long ship_x = 0;
